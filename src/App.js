@@ -1,14 +1,23 @@
-import React, { Component } from 'react';
-// import logo from './logo.svg';
-// import './App.css';
-//import MyName from './MyName';
-import HeaderContainer from './component/header/headerContainer';
+import React, { Component ,Fragment } from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
+import Seonhong from "./component/Seonhong/seonhong";
+import Kwangmin from "./component/Kwangmin/kwangmin";
+
+
 
 class App extends Component {
   render() {
     return (
-      // <MyName name = "리액트"/>
-      <HeaderContainer />
+      <Router>
+        <div>
+            <swtich>
+              {/* <Route exact path ="/" component ={Seonhong}/> */}
+              <Route exact path ="/" component={Seonhong} />
+              <Route path ="/kwangmin" component={Kwangmin}/>
+            </swtich>
+        </div>    
+      </Router>
     );
   }
 }
