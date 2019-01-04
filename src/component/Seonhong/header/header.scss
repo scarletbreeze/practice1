@@ -1,0 +1,244 @@
+
+.cd-auto-hide-header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    /* Force Hardware Acceleration */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    transition: transform .5s;
+    transition: transform .5s, -webkit-transform .5s;
+    &:after{
+        clear: both;
+        content: "";
+        display: block;
+    }
+    .is-hidden{
+        -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+         transform: translateY(-100%);
+    }
+    .logo,.nav-trigger{
+        margin: 0 5%;
+    }
+    .logo{
+        a,img{
+            display: block;
+            width: 118px;
+        }
+    }
+    .nav-languages{
+        margin: 0 20px 0 auto;
+        span{
+            padding: 0 8px;
+            font-size: 14px;
+            &:hover{
+                font-weight: 500;
+                color: #62b57e;
+            }
+        }
+    }
+    .nav-trigger{
+        display: table;
+        height: 100%;
+        padding: 0 1em;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        color: #25283D;
+        font-weight: bold;
+        right: 0;
+        border-left: 1px solid #f2f2f2;
+        span{
+            display: table-cell;
+            vertical-align: middle;
+        }
+        em{
+            margin: 6px auto 14px;
+            -webkit-transition: background-color .2s;
+            transition: background-color .2s;
+            &:before,&:after{
+                position: absolute;
+                content: '';
+                left: 0;
+                -webkit-transition: -webkit-transform .2s;
+                transition: -webkit-transform .2s;
+                transition: transform .2s;
+                transition: transform .2s, -webkit-transform .2s;
+            }
+            &:before{
+                -webkit-transform: translateY(-6px);
+                -ms-transform: translateY(-6px);
+                transform: translateY(-6px);
+            }
+            &:after{
+                -webkit-transform: translateY(6px);
+                -ms-transform: translateY(6px);
+                transform: translateY(6px);
+            }
+        }
+        em,em::after,em::before{
+            display: block;
+            position: relative;
+            height: 2px;
+            width: 22px;
+            background-color: #25283D;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        
+    }
+    .nav-open{
+        .nav-trigger{
+            em{
+                background-color: rgba(255, 255, 255, 0);
+                &:before{
+                    -webkit-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                }
+                &:after{
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+    .cd-primary-nav {
+        /* display: inline-block; */
+        /* float: right; */
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        /* padding-right: 5%; */
+    }
+}
+
+
+
+
+@media only screen and (min-width: 1024px) {
+    .cd-auto-hide-header {
+        height: 80px;
+    }
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+    .nav-languages {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .cd-auto-hide-header .nav-trigger {
+        display: none;
+    }
+}
+
+
+.nav-glosign {
+    margin: 0 20px;
+}
+
+.nav-glosign>a {
+    all: unset;
+    cursor: pointer;
+    color: #2a3c4d;
+}
+
+//ul을 cd-primary-nav밑에 넣으면 글
+.cd-primary-nav>ul {
+    position: absolute;
+    z-index: 2;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    display: none;
+    box-shadow: 0 14px 20px rgba(0, 0, 0, 0.2);
+    a{
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        /* padding-left: 5%; */
+        color: #25283D;
+        font-size: 1.8rem;
+        border-top: 1px solid #f2f2f2;
+        &:hover,.active{
+            color: #62b57e;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .cd-primary-nav {
+        /* vertically align its content */
+        /* display: table; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ul{
+             display: table-cell;
+             vertical-align: middle;
+        /* reset mobile style */
+             position: relative;
+             width: auto;
+            top: 0;
+            padding: 0;
+            background-color: transparent;
+            box-shadow: none;
+            &:after{
+                clear: both;
+                content: "";
+                display: block;
+            }
+            li{
+                 display: inline-block;
+                 float: left;
+                 margin-right: 1.5em;
+                 &:last-of-type{
+                    margin-right: 0;
+                 }
+            }
+            a{
+                height: auto;
+                line-height: normal;
+                padding: 0;
+                border: none; 
+            }
+        }
+    }
+    
+}
+
+.nav-open .cd-primary-nav ul,
+.cd-primary-nav ul:target {
+    /* 
+  	show primary nav - mobile only 
+  	:target is used to show navigation on no-js devices
+  */
+    display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+    .nav-open .cd-primary-nav ul,
+    .cd-primary-nav ul:target {
+        display: table-cell;
+    }
+}
+

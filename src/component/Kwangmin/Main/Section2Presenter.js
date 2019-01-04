@@ -1,7 +1,7 @@
 import React from 'react';
 import './Section.scss'
-import image1 from '../../img/MainPage/glohands_ci_01.png'
-import image2 from '../../img/MainPage/glohands_ci_02.png'
+import image1 from '../../../img/MainPage/glohands_ci_01.png'
+import image2 from '../../../img/MainPage/glohands_ci_02.png'
 const Section2Presenter = ({props, context}) => {
     return (
         <section class="section" id="2">

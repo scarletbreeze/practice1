@@ -1,5 +1,5 @@
 import React from 'react';
-import image0 from '../../img/MainPage/glohands_vision.png'
+import image0 from '../../../img/MainPage/glohands_vision.png'
 import './Section.scss'
 
 const Section0Presenter = ({props, context}) => {

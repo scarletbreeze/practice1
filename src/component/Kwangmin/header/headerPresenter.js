@@ -1,6 +1,8 @@
 import React from 'react';
 import './header.scss'
-import image from '../../img/MainPage/glosign_png_black_665.png'
+import image from '../../../img/MainPage/glosign_png_black_665.png'
+import { NavLink } from 'react-router-dom';
+
 
 const HeaderPresenter = ({props, context}) => {
 
@@ -24,10 +26,13 @@ const HeaderPresenter = ({props, context}) => {
 
             <ul id="cd-navigation">
                 <li>
-                    <a href="/">GloHands</a>
+                    {/* GloHands */}
+                    {/* <NavLink exact to="/" className="item" activeClassName="active">홈</NavLink> */}
+                    <NavLink exact to="/" >선홍</NavLink>
                 </li>
                 <li>
-                    <a href="/">Our Services</a>
+                    {/* <a href="/">Our Services</a> */}
+                    <NavLink to="/kwangmin">광민</NavLink>
                 </li>
                 <li>
                     <a href="/">Business</a>
