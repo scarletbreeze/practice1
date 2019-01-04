@@ -7,6 +7,7 @@ import Kwangmin from "./component/Kwangmin/kwangmin";
 
 
 class App extends Component {
+  
   render() {
     return (
       <Router>
@@ -23,3 +24,4 @@ class App extends Component {
 }
 
 export default App;
+
