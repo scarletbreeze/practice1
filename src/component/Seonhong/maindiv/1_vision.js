@@ -8,7 +8,7 @@ class Vision extends Component{
             <section class="section" id="0">
                 <div id="sec1">
                     <p class="sec_top">“Global Hands” 글로벌의 손길</p><br />
-                    <div class="sec_img"><img class="sec1_img" src={require('../../img/MainPage/glohands_vision.png')}/></div>
+                    <div class="sec_img"><img class="sec1_img" src={require('../../../img/MainPage/glohands_vision.png')}/></div>
                     <div class="sec_div">
                         <div class="sec_title">Our vision</div>
                         <div class="sec_contents">

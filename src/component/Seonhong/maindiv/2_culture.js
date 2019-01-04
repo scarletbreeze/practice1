@@ -7,7 +7,7 @@ class Culture extends Component{
             <section class="section" id="1">
                 <div id="sec2">
                     <p class="sec_top">서로의 도움으로 함께 성장하는 글로핸즈</p><br />
-                    <div class="sec_img"><img class="sec2_img" src={require('../../img/MainPage/glohands_culture.png')}/></div>
+                    <div class="sec_img"><img class="sec2_img" src={require('../../../img/MainPage/glohands_culture.png')}/></div>
                     <div class="sec_div">
                         <div class="sec_title">Our culture</div>
                         <div class="sec_contents">

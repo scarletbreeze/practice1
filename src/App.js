@@ -1,43 +1,23 @@
 import React, { Component ,Fragment } from 'react';
-// import './basic.js';
-import './basestyle.scss';
-import './reset.scss';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-//import MyName from './MyName';
-import HeaderContainer from './component/header/headerContainer';
-import SubNavContainer from './component/subnav/subNavContainer';
-import Vision from './component/maindiv/1_vision';
-import Culture from './component/maindiv/2_culture';
-import CI from './component/maindiv/3_ci';
-import Article from './component/maindiv/4_article';
-import Notice from './component/maindiv/5_notice';
+import Seonhong from "./component/Seonhong/seonhong";
+import Kwangmin from "./component/Kwangmin/kwangmin";
+
+
 
 class App extends Component {
   render() {
     return (
-      // <MyName name = "리액트"/>
-      <Fragment>
-        <HeaderContainer />
-        <SubNavContainer />
-
-
-
-        <main class="cd-main-content sub-nav-hero">
-          <div class="contents">
-            <Fragment>
-              <Vision />
-              <Culture />
-              <CI />
-              <Article />
-              <Notice />
-            </Fragment>       
-          </div>
-        </main> 
-      </Fragment>
-
-
-
-
+      <Router>
+        <div>
+            <swtich>
+              {/* <Route exact path ="/" component ={Seonhong}/> */}
+              <Route exact path ="/" component={Seonhong} />
+              <Route path ="/kwangmin" component={Kwangmin}/>
+            </swtich>
+        </div>    
+      </Router>
     );
   }
 }
