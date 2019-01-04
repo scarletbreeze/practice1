@@ -1,0 +1,25 @@
+.cd-hero{
+    display: table;
+    width: 100%;
+    margin-top: 60px;
+    height: 200px;
+    background: url(../../img/MainPage/glohands_top_01_big.png);
+    background-size: cover;
+    .cd-hero-content{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .cd-hero {
+        height: 300px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .cd-hero {
+        height: 400px;
+        margin-top: 80px;
+    }
+}

@@ -7,7 +7,9 @@ const HeaderPresenter = ({props, context}) => {
     return(
         <header class="cd-auto-hide-header">
         <div class="logo">
-            <img src={image} alt="Logo"/> 
+            <a href="/">
+              <img src={image} alt="Logo"/> 
+            </a>
         </div>
 
         <nav class="cd-primary-nav">

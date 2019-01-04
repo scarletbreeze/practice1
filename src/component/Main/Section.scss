@@ -1,0 +1,164 @@
+
+.section {
+    width: 100%;
+    max-width: 1100px;
+    padding: 75px 0;
+    .sec_top {
+        font-size: 2.5rem;
+        color: #25283f;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    //news는 section 3
+    .sec_news {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .news_box{
+            width: 80%;
+            max-width: 600px;
+            padding: 20px 0;
+            background-color: #ffffff;
+            box-shadow: 0 0 3.9px 0.1px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            color: #585858;
+            .news_logo{
+                width: 30%;
+                margin: 5px auto;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                .img{
+                    width: 120px;
+                }
+            }
+            .news_header{
+                width: 70%;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.57;
+                text-align: right;
+                color: #585858;
+                padding: 0 20px 0 0;
+            }
+        }
+    }
+    .sec_img {
+        width: 100%;
+        max-width: 900px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .sec1_img {
+            width: 100%;
+            max-width: 800px;
+        }
+    }
+    .sec_div {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 50px auto 0;
+        .sec_title {
+            flex: 1;
+            font-size: 2.5rem;
+            color: #25283f;
+            font-weight: 500;
+        }
+        .sec_contents {
+            flex: 3;
+            font-size: 1.7rem;
+            line-height: 130%;
+            color: #888;
+            font-weight: 400;
+        }
+
+    }
+    
+}
+
+
+
+
+
+
+// 여기는 section 4 
+.sec_top {
+    font-size: 2.5rem;
+    color: #25283f;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 50px;
+    a{
+        color:#000;
+        &:hover{
+            color: #2a3c4d;
+            text-decoration: underline;
+        }
+    }
+    
+}
+
+.sec_notice{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .notice_list{
+        width: 100%;
+        ul{
+             width: 100%;
+             max-width: 800px;
+             margin: 0 auto;
+        }
+        .each_notice{
+        
+            margin: 10px 0 15px;
+            border-bottom: 1px solid #d8d8d8;
+            padding-bottom: 15px;
+            cursor: pointer;
+            a{
+                color:#000;
+            }
+            .notice_header{
+                display: flex;
+                align-items: center;
+            }
+            .notice_title {
+                flex: 1;
+                padding: 10px 0;
+                font-size: 24px;
+                font-weight: 600;
+            }
+            .notice_content {
+                width: 100%;
+                height: 100px;
+                overflow-y: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                p{
+                    margin-bottom: 0px; 
+                    font-stretch: normal; 
+                    font-size: 13px; 
+                    line-height: normal; 
+                    font-family: Apple SD Gothic NeoI; 
+                    color: rgb(67, 60, 68)
+                }
+                
+            }
+            
+        }
+    }
+}
+
+.each_notice:last-child{
+    border: none;
+}
