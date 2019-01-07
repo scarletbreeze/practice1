@@ -2,10 +2,11 @@ import React from 'react';
 import './nav.scss';
 
 const NavPresenter = ({props, context}) => {
-   
+    
     return (
         <div>
-             <nav class="cd-secondary-nav" >
+            <div>asdfasdfasdf</div>
+             <nav class="cd-secondary-nav" id="nav" >
             <ul>
                 <li class="sub_navi_list first">
                     <a class="active" href="#0">비전</a>
