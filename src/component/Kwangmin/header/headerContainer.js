@@ -10,16 +10,27 @@ class HeaderContainer extends Component{
     constructor(props) {
         super(props);
 
-        this.state = { hide:"cd-auto-hide-header"};
+        this.state = { hide:"cd-auto-hide-header",prevHeight:0};
 
         this.handleScroll = this.handleScroll.bind(this);
     }
     handleScroll = e => {
-        this.setState({scroll: window.scrollY});
+        let prevheight=this.state.prevHeight;
+        let currheight=window.scrollY;
+        console.log("scroll:",this.state.prevHeight, window.scrollY);
+        this.setState({scroll: window.scrollY,prevHeight:window.scrollY});
+        
         if(this.state.scroll >=400){
             this.setState({
                 hide:"cd-auto-hide-header is-hidden"
             })
+            // console.log(window.scrollY," ",this.state.prevHeight);
+            if(prevheight>currheight){
+                this.setState({
+                    hide:"cd-auto-hide-header"
+                })
+                console.log("asdfasdf");
+            }
         }
         else{
             this.setState({

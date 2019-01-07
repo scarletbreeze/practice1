@@ -1,12 +1,11 @@
 import React from 'react';
 import './nav.scss';
 
-const NavPresenter = ({props, context}) => {
-    
+const NavPresenter = ({name, context, changeClassName, position}) => {
+    // "cd-secondary-nav"
     return (
         <div>
-            <div>asdfasdfasdf</div>
-             <nav class="cd-secondary-nav" id="nav" >
+             <nav className={["cd-secondary-nav", position].join(" ")} id="nav" >
             <ul>
                 <li class="sub_navi_list first">
                     <a class="active" href="#0">비전</a>
