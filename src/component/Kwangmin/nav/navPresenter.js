@@ -1,7 +1,7 @@
 import React from 'react';
 import './nav.scss';
 
-const NavPresenter = ({name, context, changeClassName, position}) => {
+const NavPresenter = ({position}) => {
     // "cd-secondary-nav"
     return (
         <div>

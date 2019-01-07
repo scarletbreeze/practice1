@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 const HeaderPresenter = ({props, context}) => {
     
     return(
-        <header class="cd-auto-hide-header" id="header1">
+        <header class="cd-auto-hide-header" class={props}>
         <div class="logo">
             <a href="/">
               <img src={image} alt="Logo"/> 
