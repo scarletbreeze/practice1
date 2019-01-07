@@ -54,12 +54,7 @@ class HeaderContainer extends Component{
         
     }
    
-    handleHeader=()=>{
-        this.setState({
-            hide:"cd-auto-hide-header"
-        })
-    }
-
+   
   componentDidUpdate(prevProps, prevState) {
         // if(this.state.scroll<prevState.scroll){
         //     document.addEventListener('scroll',this.handleHeader);
