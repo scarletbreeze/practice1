@@ -7,7 +7,7 @@ const SubNavPresenter = ({props, context}) => {
     return(
         // <!-- .cd-auto-hide-header -->
     
-        <fragment>
+        <Fragment>
             <section class="cd-hero">
                 <div class="cd-hero-content">
                     {/* <!-- your content here --> */}
@@ -38,7 +38,7 @@ const SubNavPresenter = ({props, context}) => {
                     </li> --> */}
                 </ul>
             </nav>
-        </fragment>
+        </Fragment>
     )
 }
 export default SubNavPresenter;
